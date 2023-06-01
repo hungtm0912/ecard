@@ -5,12 +5,8 @@
 			FROM user
 			WHERE email ="'.$email.'" AND password ="'.$password.'"';
 	
-	$result = mysql_query($query);
+	$result = mysqli_connect($query);
 	
-	if(mysql_num_rows($result)) {
-		//echo 'test';
-		//echo "<script type='text/javascript'>alert('message');</script>";
-		$row = mysql_fetch_assoc($result);
 		
 		$_SESSION['email'] = $email;
 		$_SESSION['id_user'] = $row['id_user'];
@@ -26,10 +22,6 @@
 			header('Location: indexadmin.php');
 		else
 			header('Location: index.php');
-	}
-	else{
 		$_SESSION['login'] = 2;
-		header('Location: signin.php');
-		//header('Location: index.php');
-	}
+
 ?>

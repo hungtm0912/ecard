@@ -3,10 +3,10 @@
 	
 		extract($_POST);
 		
-		$name = $fname.' '.$lname;
+		$name = `$fname`;
 
-		$query = 'INSERT INTO user
-				(username, email, password, no_hp, level, id_status, saldo) 
+		$query = 'INSERT INTO `user`
+				(`username`, `email`, `password`, `no_hp`, `level`, `id_status`, `saldo`) 
 				VALUES (
 				"'.$username.'",  
 				"'.$email.'",
@@ -16,7 +16,7 @@
 				0,
 				0)';
 		
-		$result = mysql_query($query);
+		$result = mysqli_connect($query);
 		
 		if($result)
 		{

@@ -16,7 +16,7 @@
 			"'.$no_rek.'"
 			)';
 	
-	$result = mysql_query($query);
+	$result = mysqli_connect($query);
 	
 	if($result)
 	{

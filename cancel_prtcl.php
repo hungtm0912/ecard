@@ -8,7 +8,7 @@
 				id_statustrx = 3
 				WHERE id_topup = "'.$f.'"';			
 
-		$result = mysql_query($query);
+		$result = mysqli_connect($query);
 		
 		if($result)
 		{
