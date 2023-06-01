@@ -6,7 +6,7 @@
 	$query = 'DELETE FROM topup
 			WHERE id_topup="'.$t.'"';
 	
-	$result = mysql_query($query);
+	$result = mysqli_connect($query);
 	
 	if($result)
 		header('Location: index.php');

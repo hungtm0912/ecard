@@ -2,5 +2,5 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "trainfc";
+$dbname = "nfc_db";
 $connect = mysqli_connect($servername,$username,$password,$dbname);

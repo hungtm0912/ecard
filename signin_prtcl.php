@@ -2,12 +2,11 @@
 	require_once 'dbconnect.php';
 	extract($_POST);
 	$query = 'SELECT * 
-			FROM user
-			WHERE email ="'.$email.'" AND password ="'.$password.'"';
+			FROM `user`
+			WHERE `email` ="'.$email.'" AND `password` ="'.$password.'"';
 	
 	$result = mysqli_connect($query);
 	
-		
 		$_SESSION['email'] = $email;
 		$_SESSION['id_user'] = $row['id_user'];
 		$_SESSION['username'] = $row['username'];
